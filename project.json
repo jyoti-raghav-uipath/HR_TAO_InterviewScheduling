@@ -1,0 +1,81 @@
+{
+  "name": "HR_TAO_InterviewScheduling",
+  "description": "Blank Process",
+  "main": "Main.xaml",
+  "dependencies": {
+    "UiPath.DataService.Activities": "[21.10.1]",
+    "UiPath.Mail.Activities": "[1.20.2]",
+    "UiPath.System.Activities": "[23.4.3]",
+    "UiPath.Testing.Activities": "[22.4.3]",
+    "UiPathTeam.OutlookCalendar.Activities": "[1.0.0]"
+  },
+  "webServices": [],
+  "entitiesStores": [
+    {
+      "serviceDocument": ".entities/EntitiesStore.json",
+      "tenantName": "DSF_Internal",
+      "namespace": "TAO_InterviewScheduling",
+      "uniqueReference": "IExxXxpdS8/Jky2kb78087AMpsdeG7D1JNIugUIXcHU="
+    }
+  ],
+  "schemaVersion": "4.0",
+  "studioVersion": "22.4.0.0",
+  "projectVersion": "1.0.2",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "netFrameworkLazyLoading": false,
+    "isPausable": true,
+    "isAttended": false,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "workflowSerialization": "DataContract",
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": true,
+    "pipType": "ChildSession"
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Process",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "dd2a9905-47e5-4e69-8d61-0181d07485e4",
+        "testCaseType": "TestCase",
+        "fileName": "Test Cases\\TC_InterviewScheduling.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "0f6e4ae6-0d9e-4c65-8b06-588452404a62",
+        "testCaseType": "TestCase",
+        "fileName": "Test Cases\\TestCase.xaml"
+      }
+    ],
+    "modernBehavior": true
+  },
+  "expressionLanguage": "VisualBasic",
+  "entryPoints": [
+    {
+      "filePath": "Main.xaml",
+      "uniqueId": "e2a31d9a-a086-4576-be20-a549a4e9aecd",
+      "input": [],
+      "output": []
+    }
+  ],
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {},
+  "targetFramework": "Legacy"
+}
