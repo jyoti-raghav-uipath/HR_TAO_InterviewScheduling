@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1150,700.666666666667" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System" xmlns:t="clr-namespace:TAO_InterviewScheduling;assembly=DataService.TAO_InterviewScheduling" xmlns:uda="clr-namespace:UiPath.DataService.Activities;assembly=UiPath.DataService.Activities.Core" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uoa="clr-namespace:UiPathTeam.OutlookCalendar.Activities;assembly=UiPathTeam.OutlookCalendar.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="857.333333333333,702" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System" xmlns:t="clr-namespace:TAO_InterviewScheduling;assembly=DataService.TAO_InterviewScheduling" xmlns:uda="clr-namespace:UiPath.DataService.Activities;assembly=UiPath.DataService.Activities.Core" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uoa="clr-namespace:UiPathTeam.OutlookCalendar.Activities;assembly=UiPathTeam.OutlookCalendar.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="31">
       <x:String>System.Activities</x:String>
@@ -35,7 +35,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="35">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="70">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -70,9 +70,10 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>NPOI</AssemblyReference>
       <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart sap:VirtualizedContainerService.HintSize="634,636" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart sap:VirtualizedContainerService.HintSize="634,637.333333333333" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="scg:List(snm:MailMessage)" Name="Mails" />
       <Variable x:TypeArguments="t:TAO" Default="[new TAO]" Name="UpdateRecord" />
@@ -93,11 +94,11 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">200,127.166666666667</av:Point>
-          <av:Size x:Key="ShapeSize">200,22</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">300,149.166666666667 300,196.666666666667</av:PointCollection>
+          <av:Size x:Key="ShapeSize">200,25.3333333333333</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">300,152.5 300,196.666666666667</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:GetOutlookMailMessages Account="{x:Null}" Filter="{x:Null}" FilterByMessageIds="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Get Outlook Mail Messages" GetAttachements="False" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="GetOutlookMailMessages_1" MailFolder="Inbox\HR" MarkAsRead="True" Messages="[Mails]" OnlyUnreadMessages="True" OrderByDate="NewestFirst" Top="1">
+      <ui:GetOutlookMailMessages Account="{x:Null}" Filter="{x:Null}" FilterByMessageIds="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Get Outlook Mail Messages" GetAttachements="False" sap:VirtualizedContainerService.HintSize="200,25.3333333333333" sap2010:WorkflowViewState.IdRef="GetOutlookMailMessages_1" MailFolder="Inbox\HR" MarkAsRead="True" Messages="[Mails]" OnlyUnreadMessages="True" OrderByDate="NewestFirst" Top="1">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -119,10 +120,10 @@
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">370,275.333333333333</av:Point>
-                  <av:Size x:Key="ShapeSize">200,69.3333333333333</av:Size>
+                  <av:Size x:Key="ShapeSize">200,84.6666666666667</av:Size>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Sequence sap:VirtualizedContainerService.HintSize="200,69.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+              <Sequence sap:VirtualizedContainerService.HintSize="594.666666666667,2195.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="scg:IList(t:TAO)" Name="CurrentRecords" />
                   <Variable x:TypeArguments="t:TAO" Name="OutputRevord" />
@@ -138,8 +139,8 @@
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="341.333333333333,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Scheduling Interview&quot;]" />
-                <Assign DisplayName="Assign Job ID" sap:VirtualizedContainerService.HintSize="341.333333333333,62" sap2010:WorkflowViewState.IdRef="Assign_5">
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="532.666666666667,96" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Scheduling Interview&quot;]" />
+                <Assign DisplayName="Assign Job ID" sap:VirtualizedContainerService.HintSize="532.666666666667,85.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_5">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:String">[JobID]</OutArgument>
                   </Assign.To>
@@ -147,7 +148,7 @@
                     <InArgument x:TypeArguments="x:String">[Mails(0).Subject.Replace("Available for interview Job ID:","").Split(" "C)(0)]</InArgument>
                   </Assign.Value>
                 </Assign>
-                <Assign DisplayName="Assign Candidate Name" sap:VirtualizedContainerService.HintSize="341.333333333333,62" sap2010:WorkflowViewState.IdRef="Assign_6">
+                <Assign DisplayName="Assign Candidate Name" sap:VirtualizedContainerService.HintSize="532.666666666667,85.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_6">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:String">[CandidateName]</OutArgument>
                   </Assign.To>
@@ -155,7 +156,7 @@
                     <InArgument x:TypeArguments="x:String">[Mails(0).Subject.Replace("Available for interview Job ID:","").Split(":"C)(1)]</InArgument>
                   </Assign.Value>
                 </Assign>
-                <uda:QueryEntityRecords x:TypeArguments="t:TAO" TotalRecords="{x:Null}" ContinueOnError="False" DisplayName="Query Entity Records" ExpansionDepth="2" sap:VirtualizedContainerService.HintSize="341.333333333333,225.333333333333" sap2010:WorkflowViewState.IdRef="QueryEntityRecords`1_2" OutputRecords="[CurrentRecords]" Skip="0" SortAscending="True" SortByField="Id" TimeoutInMs="30000" Top="100">
+                <uda:QueryEntityRecords x:TypeArguments="t:TAO" TotalRecords="{x:Null}" ContinueOnError="False" DisplayName="Query Entity Records" ExpansionDepth="2" sap:VirtualizedContainerService.HintSize="532.666666666667,226.666666666667" sap2010:WorkflowViewState.IdRef="QueryEntityRecords`1_2" OutputRecords="[CurrentRecords]" Skip="0" SortAscending="True" SortByField="Id" TimeoutInMs="30000" Top="100">
                   <uda:QueryEntityRecords.FilterArguments>
                     <uda:FilterArgument FilterActivityType="t:TAO">
                       <uda:FilterArgument.Filter>
@@ -180,7 +181,7 @@
                     </scg:List>
                   </uda:QueryEntityRecords.FilterValues>
                 </uda:QueryEntityRecords>
-                <Assign DisplayName="Assign Candidate Email" sap:VirtualizedContainerService.HintSize="341.333333333333,62" sap2010:WorkflowViewState.IdRef="Assign_7">
+                <Assign DisplayName="Assign Candidate Email" sap:VirtualizedContainerService.HintSize="532.666666666667,85.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_7">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:String">[CandidateEmail]</OutArgument>
                   </Assign.To>
@@ -188,7 +189,7 @@
                     <InArgument x:TypeArguments="x:String">[CurrentRecords(0).CandidateEmail]</InArgument>
                   </Assign.Value>
                 </Assign>
-                <Assign DisplayName="Assign Recruiter Email" sap:VirtualizedContainerService.HintSize="341.333333333333,62" sap2010:WorkflowViewState.IdRef="Assign_8">
+                <Assign DisplayName="Assign Recruiter Email" sap:VirtualizedContainerService.HintSize="532.666666666667,85.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_8">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:String">[RecruiterEmail]</OutArgument>
                   </Assign.To>
@@ -196,7 +197,7 @@
                     <InArgument x:TypeArguments="x:String">[CurrentRecords(0).RecruiterEmail]</InArgument>
                   </Assign.Value>
                 </Assign>
-                <Assign DisplayName="Assign 1" sap:VirtualizedContainerService.HintSize="341.333333333333,62" sap2010:WorkflowViewState.IdRef="Assign_3">
+                <Assign DisplayName="Assign 1" sap:VirtualizedContainerService.HintSize="532.666666666667,85.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_3">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:String">[ResponseTimeslot]</OutArgument>
                   </Assign.To>
@@ -204,15 +205,35 @@
                     <InArgument x:TypeArguments="x:String">[Mails(0).Body.Replace("I will be available for interview on ","")]</InArgument>
                   </Assign.Value>
                 </Assign>
-                <Assign DisplayName="Assign 2" sap:VirtualizedContainerService.HintSize="341.333333333333,62" sap2010:WorkflowViewState.IdRef="Assign_4">
-                  <Assign.To>
-                    <OutArgument x:TypeArguments="x:String">[ResponseTimeslot]</OutArgument>
-                  </Assign.To>
-                  <Assign.Value>
-                    <InArgument x:TypeArguments="x:String">[ResponseTimeslot.Remove(ResponseTimeslot.IndexOf("Sent"))]</InArgument>
-                  </Assign.Value>
-                </Assign>
-                <Assign DisplayName="Assign Interview Date" sap:VirtualizedContainerService.HintSize="341.333333333333,62" sap2010:WorkflowViewState.IdRef="Assign_2">
+                <If Condition="[ResponseTimeslot.Contains(&quot;Sent&quot;)]" sap:VirtualizedContainerService.HintSize="532.666666666667,392" sap2010:WorkflowViewState.IdRef="If_1">
+                  <If.Then>
+                    <Sequence sap:VirtualizedContainerService.HintSize="496,196" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Assign DisplayName="Assign 2" sap:VirtualizedContainerService.HintSize="434,85.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_4">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:String">[ResponseTimeslot]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:String">[ResponseTimeslot.Remove(ResponseTimeslot.IndexOf("Sent"))]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                    </Sequence>
+                  </If.Then>
+                  <If.Else>
+                    <Sequence sap2010:WorkflowViewState.IdRef="Sequence_3">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </Sequence>
+                  </If.Else>
+                </If>
+                <Assign DisplayName="Assign Interview Date" sap:VirtualizedContainerService.HintSize="532.666666666667,85.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_2">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:String">[InterviewDate]</OutArgument>
                   </Assign.To>
@@ -220,7 +241,7 @@
                     <InArgument x:TypeArguments="x:String">[convert.ToDateTime(ResponseTimeslot).ToShortDateString]</InArgument>
                   </Assign.Value>
                 </Assign>
-                <uoa:SendOutlookMeetingRequest Account="{x:Null}" Location="{x:Null}" MeetingAttachments="{x:Null}" Optional="{x:Null}" AllDayEvent="False" Body="Blocking your calender for interview with UiPath" DisplayName="Send Outlook Meeting Request" EndTime="[convert.ToDateTime(ResponseTimeslot).AddHours(1)]" sap:VirtualizedContainerService.HintSize="341.333333333333,166" sap2010:WorkflowViewState.IdRef="SendOutlookMeetingRequest_1" Required="[CandidateEmail+&quot;;&quot;+RecruiterEmail]" ResponseRequested="False" StartTime="[convert.ToDateTime(ResponseTimeslot)]" Title="[&quot;Interview scheduled with &quot;+CandidateEmail]">
+                <uoa:SendOutlookMeetingRequest Account="{x:Null}" Location="{x:Null}" MeetingAttachments="{x:Null}" Optional="{x:Null}" AllDayEvent="False" Body="Blocking your calender for interview with UiPath" DisplayName="Send Outlook Meeting Request" EndTime="[convert.ToDateTime(ResponseTimeslot).AddHours(1)]" sap:VirtualizedContainerService.HintSize="532.666666666667,167.333333333333" sap2010:WorkflowViewState.IdRef="SendOutlookMeetingRequest_1" Required="[CandidateEmail+&quot;;&quot;+RecruiterEmail]" ResponseRequested="False" StartTime="[convert.ToDateTime(ResponseTimeslot)]" Title="[&quot;Interview scheduled with &quot;+CandidateEmail]">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -228,7 +249,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </uoa:SendOutlookMeetingRequest>
-                <ui:MultipleAssign DisplayName="Multiple Assign Entity Updating record" sap:VirtualizedContainerService.HintSize="341.333333333333,22" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                <ui:MultipleAssign DisplayName="Multiple Assign Entity Updating record" sap:VirtualizedContainerService.HintSize="532.666666666667,25.3333333333333" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
                   <ui:MultipleAssign.AssignOperations>
                     <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                       <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -264,10 +285,10 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:MultipleAssign>
-                <uda:UpdateEntityRecord x:TypeArguments="t:TAO" ContinueOnError="False" DisplayName="Update Entity Record" ExpansionDepth="2" sap:VirtualizedContainerService.HintSize="341.333333333333,22" sap2010:WorkflowViewState.IdRef="UpdateEntityRecord`1_1" InputEntity="[UpdateRecord]" OutputEntity="[OutputRevord]" TimeoutInMs="30000">
+                <uda:UpdateEntityRecord x:TypeArguments="t:TAO" ContinueOnError="False" DisplayName="Update Entity Record" ExpansionDepth="2" sap:VirtualizedContainerService.HintSize="532.666666666667,225.333333333333" sap2010:WorkflowViewState.IdRef="UpdateEntityRecord`1_1" InputEntity="[UpdateRecord]" OutputEntity="[OutputRevord]" TimeoutInMs="30000">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>

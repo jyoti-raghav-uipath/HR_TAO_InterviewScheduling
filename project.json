@@ -6,7 +6,7 @@
     "UiPath.DataService.Activities": "[21.10.1]",
     "UiPath.Mail.Activities": "[1.20.2]",
     "UiPath.System.Activities": "[23.4.3]",
-    "UiPath.Testing.Activities": "[22.4.3]",
+    "UiPath.Testing.Activities": "[23.4.1]",
     "UiPathTeam.OutlookCalendar.Activities": "[1.0.0]"
   },
   "webServices": [],
@@ -20,7 +20,7 @@
   ],
   "schemaVersion": "4.0",
   "studioVersion": "22.4.0.0",
-  "projectVersion": "1.0.2",
+  "projectVersion": "1.0.8",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
